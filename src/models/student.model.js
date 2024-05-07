@@ -1,4 +1,6 @@
 import mongoose , {Schema} from "mongoose"
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 //----------------------Student schema Design--------------------------------------------
 const studentSchema = new Schema(
@@ -74,10 +76,7 @@ const studentSchema = new Schema(
                 type:String,
                 required:true,
             },
-            Graduation:{
-                type: Date,
-                required:true
-            },
+        
             Course: {
                 type: String,
                 required: true,
